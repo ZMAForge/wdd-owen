@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+
+.logo {
+    /* makes logo occupy top right of parent div */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:  10px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+}
+
+.mytestbtn {
+  flex: 1;              /* each button grows equally */
+  text-align: center;
+  padding: 10px 18px;
+  background-color: #FFFFFF;
+  border-color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.mytestbtn:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px #000000;
+}
+
+/* Click effect */
+.mytestbtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px #000000;
+}

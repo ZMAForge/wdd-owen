@@ -1,25 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peanut Butter Wiki</title>
+    <link rel="stylesheet" href="Styles/wiki.css">
+    <title>Peanut Butter</title>
 </head>
+
 <body>
     <header>
-        <h1>Peanut Butter Wiki</h1>
-        <img src="" alt="">
-        <button class="mytestbtn"><a href="index.html">Home</a></button>
-        <button class="mytestbtn"><a href="wiki.html">Wiki</a></button>
-        <button class="mytestbtn"><a href="news.html">News</a></button>
+        <h1>Peanut Butter</h1>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="Images/logo.png" alt="logo image">
+        </a>
+        <nav>
+            <button class="mytestbtn"><a href="index.html">Home</a></button>
+            <button class="mytestbtn"><a href="wiki.html">Wiki</a></button>
+            <button class="mytestbtn"><a href="news.html">News</a></button>
+        </nav>
     </header>
-    <footer>
-            <h1>Peanut Butter &#8482 </h1>
-            <h3>An Original Series created by Owen Jordan</h3>
-            <div id="socials">
-                <img src="" alt="">
-                <img src="" alt="">
+
+    <div class="container">
+        <div class="grid-container1" id="grid1"></div>
+    </div>
+
+    <div id="Asher" class="content-section">
+        <div id="Asher-content" class="content">
+            Asher summary goes here
+            <div id="Asher-content-info" class="info">
+                column info goes here
             </div>
-        </footer>
+            <img src="Images/wiki/img1.png" alt="">
+        </div>
+    </div>
+
+    <div id="Ashley" class="content-section">
+        <div id="Ashley-content" class="content">
+            Ashley summary goes here
+            <div id="Ashley-content-info" class="info">
+                column info goes here
+            </div>
+            <img src="Images/wiki/img2.png" alt="">
+        </div>
+    </div>
+
+    <div id="Jacob" class="content-section">
+        <div id="Jacob-content" class="content">
+            Jacob summary goes here
+            <div id="Jacob-content-info" class="info">
+                column info goes here
+            </div>
+            <img src="Images/wiki/img3.png" alt="">
+        </div>
+    </div>
+
+    <div id="Josh" class="content-section">
+        <div id="Josh-content" class="content">
+            Josh summary goes here
+            <div id="Josh-content-info" class="info">
+                column info goes here
+            </div>
+            <img src="Images/wiki/img4.png" alt="">
+        </div>
+    </div>
+
+    <div id="Owen" class="content-section">
+        <div id="Owen-content" class="content">
+            Owen summary goes here
+            <div id="Owen-content-info" class="info">
+                column info goes here
+            </div>
+            <img src="Images/wiki/img5.png" alt="">
+        </div>
+    </div>
+
+    <div id="Logan" class="content-section">
+        <div id="Logan-content" class="content">
+            Logan summary goes here
+            <div id="Logan-content-info" class="info">
+                column info goes here
+            </div>
+            <img src="Images/wiki/img6.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        //you will have to change these three things if you wish to update
+        //list of the images on the grid
+        const mainImages = [
+            "Images/wiki/img1.jpeg",
+            "Images/wiki/img2.png",
+            "Images/wiki/img3.png",
+            "Images/wiki/img4.png",
+            "Images/wiki/img5.png",
+            "Images/wiki/img6.png"
+        ];
+        //cooresponding titles
+        const mainTitles = [
+            "Asher",
+            "Ashley",
+            "Jacob",
+            "Josh",
+            "Owen",
+            "Logan"
+        ];
+        //cooresponding links
+        const mainLinks = [
+            "Asher",
+            "Ashley",
+            "Jacob",
+            "Josh",
+            "Owen",
+            "Logan"
+        ];
+        const styles = getComputedStyle(document.documentElement);
+        const cols = parseInt(styles.getPropertyValue('--cols'));
+        const rows = parseInt(styles.getPropertyValue('--rows'));
+        function populateGrid(gridId, imagesArray, titlesArray, sectionsArray) {
+            const grid = document.getElementById(gridId);
+            grid.innerHTML = "";
+
+            for (let i = 0; i < imagesArray.length; i++) {
+                const cell = document.createElement("div");
+                cell.classList.add("grid-item");
+
+                const title = document.createElement("div");
+                title.classList.add("grid-title-text");
+                title.textContent = titlesArray[i];
+
+                const img = document.createElement("img");
+                img.src = imagesArray[i];
+                img.alt = titlesArray[i];
+
+                // CLICK EVENT
+                cell.addEventListener("click", function () {
+                    showContent(sectionsArray[i]);
+                });
+
+                cell.appendChild(title);
+                cell.appendChild(img);
+                grid.appendChild(cell);
+            }
+        }
+
+        function showContent(sectionId) {
+            // Hide all content sections
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Show the selected content section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Populate grid
+        populateGrid("grid1", mainImages.slice(0, cols * rows), mainTitles, mainLinks);
+    </script>
+
 </body>
+
 </html>
