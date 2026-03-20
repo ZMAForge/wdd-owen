@@ -38,3 +38,8 @@ nav {
   transform: translateY(0);
   box-shadow: 0 2px 5px #000000;
 }
+
+  footer {
+    border-top: 1px solid #BFBFCF;
+    font-size: 12px;
+}

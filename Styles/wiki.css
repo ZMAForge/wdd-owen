@@ -134,3 +134,8 @@
   .summary {
       background-color: green;
   }
+
+  footer {
+    border-top: 1px solid #BFBFCF;
+    font-size: 12px;
+}
