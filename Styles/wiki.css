@@ -2,7 +2,7 @@
       --cols: 6;
       --rows: 1;
       --cell-height: 200px;
-      --gap: 2px;
+      --gap: 4px;
       --container-width: 95%;
 
   }
@@ -74,7 +74,7 @@
   .grid-title-text{
     text-align: center;
   }
-  /*yhe items*/
+  /*the items*/
   .grid-item {
       display: flex;
       flex-direction: column;
@@ -87,8 +87,16 @@
 
   /*hover function*/
   .grid-item:hover {
-      border-color: #0000FF;
-      transform: scale(1.05);
+      background-color: #FFFFFF;
+      transform: translateY(-1px);
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px #000000;
+  }
+
+  /* Click effect */
+  .grid-item:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 5px #000000;
   }
 
   /*style for the image of each item*/
