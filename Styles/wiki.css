@@ -11,17 +11,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    margin:0 ;
   }
-text{
-  font-family: "Quicksand", sans-serif;
-}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Lobster', cursive;
   }
 
@@ -135,8 +128,7 @@ text{
     border-top: 4px solid #af7853;
   }
 
-  #pb_summary h4,
-  p {
+  #pb_summary h4, p {
     grid-column: 1/4;
   }
 
@@ -152,8 +144,7 @@ text{
     justify-self: center;
   }
 
-  footer h1,
-  h3 {
+  footer h1, h3 {
     margin: 10px;
   }
 
@@ -171,8 +162,7 @@ text{
 
   @media screen and (max-width: 900px) {
 
-    #hero,
-    .home-grid {
+    #hero, .home-grid {
       display: block;
       height: auto;
     }
@@ -181,8 +171,7 @@ text{
       width: 110%;
     }
 
-    nav,
-    footer {
+    nav, footer {
       flex-direction: column;
     }
 
