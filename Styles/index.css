@@ -34,9 +34,15 @@ nav {
 }
 
 header {
-  background-color: #af7853;
+  background-image: url(../Images/headerimg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #edcdad;
   text-shadow: 2px 1px 4px #73492e;
+}
+header h1{
+  padding: 30px;
 }
 
 .mytestbtn {
@@ -103,10 +109,11 @@ h2 {
 }
 
 .epi_card img {
-  max-width: 100%;
-  height: auto;
+  width: 250px;
+  height: 300px;
   border: 3px solid #73492e;
   box-shadow: 0 2px 5px #73492e;
+  object-fit: cover;
 }
 
 #pb_summary {
@@ -117,6 +124,7 @@ h2 {
   border: none;
   border-top: 4px solid #af7853;
 }
+
 #pb_summary h4, p {
   grid-column: 1/4;
 }
@@ -124,8 +132,9 @@ h2 {
   margin-top: 10px;
 }
 #pb_summary img {
-  max-width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 200px;
+  object-fit: cover;
   border: 3px solid #73492e;
   box-shadow: 0 2px 5px #73492e;
   justify-self: center;
@@ -141,7 +150,7 @@ footer h1, h3 {
 }
 #socials img {
   margin: 1em;
-  max-width: 100%;
+  max-width: 50px;
   height: auto;
 }
 

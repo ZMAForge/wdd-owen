@@ -39,9 +39,15 @@ nav {
 }
 
 header {
-  background-color: #af7853;
+  background-image: url(../Images/headerimg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #edcdad;
   text-shadow: 2px 1px 4px #73492e;
+}
+header h1{
+  padding: 30px;
 }
 
 .mytestbtn {
@@ -52,7 +58,7 @@ header {
   background-color: #af7853;
   border-color: #73492e;
   font-size: 16px;
-  font-family: "lobster", cursive;
+  font-family: "Lobster", cursive;
   cursor: pointer;
   transition: all 0.2s ease;
   color: #edcdad;

@@ -44,9 +44,15 @@
   }
 
   header {
-    background-color: #af7853;
-    color: #edcdad;
-    text-shadow: 2px 1px 4px #73492e;
+  background-image: url(../Images/headerimg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #edcdad;
+  text-shadow: 2px 1px 4px #73492e;
+  }
+  header h1{
+  padding: 30px;
   }
 
   .mytestbtn {
