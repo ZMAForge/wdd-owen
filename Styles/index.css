@@ -26,6 +26,8 @@ body {
   top: 0;
   right: 0;
   padding:  10px;
+  max-width: 100px;
+  height: 100px;
 }
 
 nav {

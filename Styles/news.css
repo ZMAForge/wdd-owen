@@ -26,11 +26,13 @@ body {
 }
 
 .logo {
-  /* makes logo occupy top right of parent div */
+    /* makes logo occupy top right of parent div */
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px;
+  padding:  10px;
+  max-width: 100px;
+  height: 100px;
 }
 
 nav {
@@ -146,20 +148,17 @@ p {
   justify-self: center;
 }
 
-footer h1,
-h3 {
+footer h1, h3 {
   margin: 10px;
 }
-
 #socials {
   display: flex;
   justify-content: right;
   margin-top: -45px;
 }
-
 #socials img {
   margin: 1em;
-  max-width: 100%;
+  max-width: 50px;
   height: auto;
 }
 

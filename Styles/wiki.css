@@ -32,10 +32,12 @@
 
   .logo {
     /* makes logo occupy top right of parent div */
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:  10px;
+  max-width: 100px;
+  height: 100px;
   }
 
   nav {
@@ -150,21 +152,19 @@
     justify-self: center;
   }
 
-  footer h1, h3 {
-    margin: 10px;
-  }
-
-  #socials {
-    display: flex;
-    justify-content: right;
-    margin-top: -45px;
-  }
-
-  #socials img {
-    margin: 1em;
-    max-width: 100%;
-    height: auto;
-  }
+footer h1, h3 {
+  margin: 10px;
+}
+#socials {
+  display: flex;
+  justify-content: right;
+  margin-top: -45px;
+}
+#socials img {
+  margin: 1em;
+  max-width: 50px;
+  height: auto;
+}
 
   @media screen and (max-width: 900px) {
 
